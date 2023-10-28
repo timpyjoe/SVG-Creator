@@ -30,15 +30,17 @@ inquirer.prompt(questions)
   .then(responses => {
     console.log(responses)
     const { letters, color, shape, bgColor } = responses;
+    var newSVG = "";
     if (shape === "Circle") {
-      const newSVG = new Circle(color, letters, bgColor);
+      newSVG = new Circle(color, letters, bgColor);
     } else if (shape === "Triangle") {
-      const newSVG = new Triangle(color, letters, bgColor);
+      newSVG = new Triangle(color, letters, bgColor);
     } else if (shape === "Square") {
-      const newSVG = new Square(color, letters, bgColor);
+      newSVG = new Square(color, letters, bgColor);
     }
 
     fs.writeFile("logo.svg", newSVG.build(), (err) => {
       if (err) console.log("There was an error")
     })
+    console.log("Generated logo.svg")
   })
