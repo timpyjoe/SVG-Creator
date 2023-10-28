@@ -2,8 +2,8 @@
     width="300" height="200"
     xmlns="http://www.w3.org/2000/svg">
 
-    <polygon points="150,10 240,190 60,190" fill="Purlple" />
+    <rect x="60" y="10" width="180" height="180" fill="#0000ff"/>
 
-    <text x="150" y="175" font-size="60" text-anchor="middle" fill="Gray">WAP</text>
+    <text x="150" y="125" font-size="60" text-anchor="middle" fill="#ff80ed">YUP</text>
 
     </svg>

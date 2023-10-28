@@ -28,8 +28,10 @@ const questions = [
 
 inquirer.prompt(questions)
   .then(responses => {
-    console.log(responses)
     const { letters, color, shape, bgColor } = responses;
+    if (letters.length > 3) {
+      throw new Error("A maximum of 3 characters may be entered.")
+    }
     var newSVG = "";
     if (shape === "Circle") {
       newSVG = new Circle(color, letters, bgColor);
